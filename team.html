@@ -1,0 +1,59 @@
+<!-- CSS Stylesheets With Relative Paths -->
+<!DOCTYPE html>
+<html lang="en-us"><html>
+
+<head>
+        <meta charset="UTF-8">
+        <title>Team</title>      
+        <!-- This line is money! It points your HTML to the CSS file. -->
+        <link rel="stylesheet" type="text/css" href="./materialize/css/style.css">
+        <link rel="stylesheet" type="text/css" href="./materialize/css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="./materialize/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">       
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">CGHMT</a>
+            <a href="#" data-target="" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+            <li><a href="visionaries.html">Visionaries</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="spotlight.html">Spotlight</a></li>
+            <li><a href="meeting.html">Meeting</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+        <ul class="sidenav" id="mobile-demo">
+        <li><a href="visionaries.html">Visionaries</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="spotlight.html">Spotlight</a></li>
+        <li><a href="meeting.html">Meeting</a></li>
+        </ul>
+
+    
+
+        
+</body>
+<script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous">
+</script>
+<script type="text/javascript" href="./materialize/js/app.js"></script>
+<script type="text/javascript" href="./materialize/js/materialize.js"></script>
+<script type="text/javascript" href="./materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script>
+        $(document).ready(function () {
+           $('.materialboxed').materialbox();
+           $('.scrollspy').scrollSpy();
+           $(".button-collapse").sideNav();
+           console.log("Connected");
+       });
+   
+   </script>
+</html>
