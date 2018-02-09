@@ -75,6 +75,12 @@
     line-height: 1.5;
 }
 
+.svg-inline--fa {
+    font-size: 3em !important;
+    vertical-align: -0.4em !important ;
+}
+
+
 @media (max-width: 768px) {
 .memberWrapper {
     width: calc(100% - 60px);
@@ -101,3 +107,4 @@
     height: 400px;
     margin: 0 auto 35px;
 }}
+
