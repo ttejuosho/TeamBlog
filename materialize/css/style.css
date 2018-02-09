@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.member{
+    max-width: 100%;
+    min-height: 500px;
+    background-color: rgb(237, 237, 241);
+    padding: 30px;
+}
+
+.members{
+    width: 100%;
+    min-height: 500px;
+    padding: 100px;
+
+}
+
+.memberWrapper{
+    display: flex;
+    max-width: 1030px;
+    min-height: 500px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: calc(100% - 200px);
+    padding: 140px 0;
+}
+
+.headShot{
+    display: inline-block;
+    padding-bottom: 0px;
+    margin-right: 10%;
+    position: relative;
+}
+
+.bio{
+    display: inline-block;
+    width: 55%;
+  
+}
+
+.redtxt{
+    color: red;
+    font-family: 'Exo', sans-serif;
+    font-size: 1.3em;
+}
+
+.greentxt{
+    color: #736773;
+    font-family: 'Exo', sans-serif;
+    font-size: 1.3em;
+}
+
+.memberName{
+    color: black;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 3em;
+}
+
+.memberBio{
+    color: black;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.memberBio1{
+    color: black;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
