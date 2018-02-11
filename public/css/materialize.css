@@ -4846,7 +4846,7 @@ small {
 }
 
 .card .card-image .card-title {
-  color: #fff;
+  color: rgb(58, 56, 56);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -5133,11 +5133,11 @@ small {
 .btn, .btn-large,
 .btn-flat {
   border: none;
-  border-radius: 2px;
+  border-radius: 10px;
   display: inline-block;
   height: 36px;
   line-height: 36px;
-  padding: 0 2rem;
+  padding: 0 4rem;
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
@@ -5207,7 +5207,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: rgb(89, 89, 93);
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;
@@ -5216,7 +5216,8 @@ small {
 }
 
 .btn:hover, .btn-large:hover {
-  background-color: #2bbbad;
+  background-color: #eff3f3;
+  color: black;
 }
 
 .btn-floating {
@@ -6084,9 +6085,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-          box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #9e9e9e;
+  -webkit-box-shadow: 0 1px 0 0 #9e9e9e;
+          box-shadow: 0 1px 0 0 #9e9e9e;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -6102,7 +6103,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
 input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #26a69a;
+  color: #9e9e9e;
 }
 
 input:not([type]).validate + label,
