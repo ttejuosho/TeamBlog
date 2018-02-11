@@ -103,7 +103,7 @@ function(req, email, password, done) {
 
   var isValidPassword = function(userpass,password){
     return bCrypt.compareSync(password, userpass);
-  }
+  };
 
   User.findOne({ where : { Email: email}}).then(function (user) {
 
@@ -133,4 +133,4 @@ function(req, email, password, done) {
 }
 ));
 
-}
+};
