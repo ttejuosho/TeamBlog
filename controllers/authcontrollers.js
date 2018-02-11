@@ -1,18 +1,18 @@
 var path = require('path');
 var models = require('../models');
-var exports = module.exports = {}
+var exports = module.exports = {};
 
 
 exports.signup = function(req,res){
 
   res.sendFile(path.join(__dirname, '/../public/signup.html')); 
 
-}
+};
 
 exports.signin = function(req,res){
 
 	res.sendFile(path.join(__dirname, '/../public/signin.html')); 
-}
+};
 
 exports.dashboard = function(req,res){
 // Printts out the sessions object
@@ -24,7 +24,7 @@ exports.dashboard = function(req,res){
 
 	res.sendFile(path.join(__dirname, '/../public/team.html')); 
 
-}
+};
 
 //prints out the user info from the session id
 exports.sessionUserId = function(req,res){
@@ -43,7 +43,7 @@ exports.sessionUserId = function(req,res){
         }).then(function(dbUser){
             res.json(dbUser);
         });
-}
+};
 
 
 
@@ -54,4 +54,4 @@ exports.logout = function(req,res){
   res.redirect('/');
   });
 
-}
+};

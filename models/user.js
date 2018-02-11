@@ -39,7 +39,7 @@ module.exports = function(sequelize, DataTypes){
             defaultValue:''
         },
        },({timestamps: true}) 
-    )
+    );
 
     // User.associate = function(models) {
     //     User.hasMany(models.Resume, {
