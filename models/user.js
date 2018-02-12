@@ -18,11 +18,6 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING,
             allowNull: false 
         },
-        Name: {
-            type: DataTypes.STRING,
-            allowNull: true,
-            defaultValue:''
-        },
         State: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -35,6 +30,11 @@ module.exports = function(sequelize, DataTypes){
         },
         Email: {
             type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue:''
+        },
+        Bio: {
+            type: DataTypes.TEXT,
             allowNull: true,
             defaultValue:''
         },
