@@ -22,7 +22,7 @@ exports.dashboard = function(req,res){
 	console.log(req.session.passport.user);
 	console.log("Session Id of user " + req.sessionID);
 
-	res.sendFile(path.join(__dirname, '/../public/team.html')); 
+	res.sendFile(path.join(__dirname, '/../public/member.html')); 
 
 };
 
