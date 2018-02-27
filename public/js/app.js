@@ -2,18 +2,20 @@ $(document).ready(function(){
 
     $(".button-collapse").sideNav();
 
+    var url = window.location.search;
+    
     // Sets a flag for whether or not we're updating a post to be false initially
     var updating = false;
 
 
-    var firstName = $("#firstName");
-    var lastName = $("#lastName");
-    var email = $("#email");
+    var First_Name = $("#First_Name");
+    var Last_Name = $("#Last_Name");
+    var Email = $("#Email");
     var location = $("#location");
-    var role = $("#role");
-    var bio = $("#bio");
+    var Role = $("#Role");
+    var Bio = $("#Bio");
 
-    $(signup).on("submit", function createNewUser(event){
+    $(signupForm).on("submit", function createNewUser(event){
         event.preventDefault();
 
  // Constructing a newUser object to saves it to the database       
@@ -27,10 +29,11 @@ $(document).ready(function(){
         };
 
         console.log(newUser);
+        submitUser(newUser);
     });
 
     // Submits a new User and brings user to member page upon completion
-    function submitPerson(User) {
+    function submitUser(User) {
         $.post("/api/user/", User, function() {
         window.location.href = "/member";
         });
