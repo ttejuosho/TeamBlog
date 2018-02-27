@@ -6,19 +6,19 @@ module.exports = function(sequelize, DataTypes){
              primaryKey: true, 
              type: DataTypes.INTEGER
          },
-        firstname: { 
+        First_Name: { 
             type: DataTypes.STRING,
             notEmpty: true
         },
-        lastname: { 
+        Last_Name: { 
             type: DataTypes.STRING,
             notEmpty: true
         },
-        password : {
+        Password : {
             type: DataTypes.STRING,
             allowNull: false 
         },
-        State: {
+        Location: {
             type: DataTypes.STRING,
             allowNull: true,
             defaultValue:''
@@ -40,12 +40,6 @@ module.exports = function(sequelize, DataTypes){
         },
        },({timestamps: true}) 
     );
-
-    // User.associate = function(models) {
-    //     User.hasMany(models.Resume, {
-    //         onDelete: 'cascade'
-    //     });
-    // }; 
 
     return User;
 };

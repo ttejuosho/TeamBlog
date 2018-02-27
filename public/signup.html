@@ -46,14 +46,16 @@
           <center>
             
           <form id="signup" name="signup" method="post" action="/signup">
-            <div class="input-field"> 
+            <div class="row">
+            <div class="input-field col s6"> 
                 <input name="firstname" type="text">
                 <label for="firstname">First Name</label>
               </div>
-              <div class="input-field"> 
+              <div class="input-field col s6"> 
                 <input name="lastname" type="text">
                 <label for="lastname">Last Name</label>
               </div>
+            </div>
               <div class="input-field">
                 <input class="text" name="email" type="email">
                 <label for="email">Email Address</label>
@@ -62,20 +64,26 @@
                   <input name="password" type="password">
                   <label for="password">Password</label>
                 </div>
-              <div class="input-field">
-                <input class="text" name="phone" type="Phone">
-                <label for="phone">Phone Number</label>
+            <div class="row">  
+              <div class="input-field col s6">
+                <input name="location" type="text">
+                <label for="location">Location</label>
               </div>
-              <div class="input-field">
-                <input class="text" name="role" type="role">
+              <div class="input-field col s6">
+                <input name="role" type="text">
                 <label for="role">Role</label>
               </div>
-          
+          </div>
+
+          <div class="input-field col s12">
+            <textarea class="materialize-textarea"></textarea>
+            <label for="bio">Short Bio</label>
+          </div>
 
               <input class="btn" type="submit" value="Sign Up">
           </form>
           <br>
-         <p> Already a member? <a href="/Signup"> Log in</a></p>
+         <p> Already a member? <a href="/signup"> Log in</a></p>
         </center>
 
     </div>
