@@ -14,6 +14,11 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING,
             notEmpty: true
         },
+        Email: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue:''
+        },
         Password : {
             type: DataTypes.STRING,
             allowNull: false 
@@ -23,12 +28,7 @@ module.exports = function(sequelize, DataTypes){
             allowNull: true,
             defaultValue:''
         },
-        Phone: {
-            type: DataTypes.STRING,
-            allowNull: true,
-            defaultValue:''
-        },
-        Email: {
+        Role: {
             type: DataTypes.STRING,
             allowNull: true,
             defaultValue:''
