@@ -11,6 +11,7 @@ $(document).ready(function(){
     var First_Name = $("#First_Name");
     var Last_Name = $("#Last_Name");
     var Email = $("#Email");
+    var Password = $("#Password");
     var location = $("#location");
     var Role = $("#Role");
     var Bio = $("#Bio");
@@ -23,7 +24,8 @@ $(document).ready(function(){
             First_Name: First_Name.val().trim(),
             Last_Name: Last_Name.val().trim(),
             Email: Email.val().trim(),
-            Location: location.val().trim(),
+            Password: Password.val().trim(),
+            location: location.val().trim(),
             Role: Role.val().trim(),
             Bio: Bio.val().trim()
         };
