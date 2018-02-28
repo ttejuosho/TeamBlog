@@ -14,7 +14,7 @@ module.exports = function(app) {
     });
 
     // Post User Info to API
-    app.post('/api/userinfo/:id', function(req, res){
+    app.post('/api/userinfo/', function(req, res){
         db.UserInfo.create({
             UserInfo: 'TBD',
             UserId: req.params.id
