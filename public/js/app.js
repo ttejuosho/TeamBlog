@@ -11,30 +11,30 @@ $(document).ready(function(){
     var Role = $("#Role");
     var Bio = $("#Bio");
 
-    $(signup).on("submit", function createNewUser(event){
+    $(register).on("submit", function createNewUser(event){
         event.preventDefault();
 
  // Constructing a newUser object to saves it to the database       
-        var newUser = {
+        var UserInfo = {
             location: location.val().trim(),
             Role: Role.val().trim(),
             Bio: Bio.val().trim()
         };
 
-        console.log(newUser);
-        submitUser(newUser);
+        console.log(UserInfo);
+        submitUser(UserInfo);
     });
 
     // Submits a new User and brings user to member page upon completion
-    function submitUser(User) {
-        $.post("/api/user/", User, function() {
+    function submitUser(UserInfo) {
+        $.post("/api/userinfo/", UserInfo, function() {
         window.location.href = "/member";
         });
     }
 
   // Gets post data for a post if we're editing
   function getUserData(id) {
-    $.get("/api/user/" + id, function(data) {
+    $.get("/api/userinfo/" + id, function(data) {
       if (data) {
         // If this post exists, prefill our cms forms with its data
 
@@ -51,10 +51,10 @@ $(document).ready(function(){
 
 
     // Update a given post, bring user to the blog page when done
-    function updateUserData(User) {
+    function updateUserData(UserInfo) {
         $.ajax({
           method: "PUT",
-          url: "/api/user",
+          url: "/api/userinfo",
           data: post
         })
         .done(function() {
