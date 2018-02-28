@@ -36,37 +36,34 @@
         </div>
     </nav>
 
+    <div class="login">
+        <div class="loginWrapper">
 
-<div class="member">
-        <div class="memberWrapper">
-            <img class=headShot src="http://via.placeholder.com/395x500">
-            <div class="bio">
-                <p class="redtxt">AppleCare Senior Advisor T2 Mac/T1 iOS</p>
-                <p class="memberName">Taiwo Tejuosho</p>
-                <p class="greentxt">Location: Chicago</p>
-                <p class="memberBio">
-                    Apparently we had reached a great height in the atmosphere, 
-                    for the sky was a dead black, and the stars had ceased to twinkle. 
-                    By the same illusion which lifts the horizon of the sea to the 
-                    level of the spectator on a hillside, the sable cloud beneath was 
-                    dished out, and the car seemed to float in the middle of an immense 
-                    dark sphere, whose upper half was strewn with silver. Looking down 
-                    into the dark gulf below, I could see a ruddy light streaming through 
-                    a rift in the clouds.
-                </p>
-                <p class="memberBio1">
-                    Roboto has a dual nature. It has a mechanical skeleton and the forms 
-                    are largely geometric. At the same time, the font features friendly and open curves. 
-                </p>
-            </div>
+          <span class="card-title">Complete Your Profile</span>
+          <center>
+            
+            <form id="signup" name="signup" method="post" action="/signup">
+    <div class="row">  
+        <div class="input-field col s6">
+          <input name="location" id="location" type="text">
+          <label for="location">Location</label>
+        </div>
+        <div class="input-field col s6">
+          <input name="role" id="Role" type="text">
+          <label for="role">Role</label>
         </div>
     </div>
 
+    <div class="input-field col s12">
+      <textarea class="materialize-textarea" id="Bio"></textarea>
+      <label for="bio">Short Bio</label>
+    </div>
 
-
-
-
-
+        <input class="btn" type="submit" value="Finish">
+    </form>
+</center>
+</div>
+</div>
 
     <footer class="page-footer">
         <div class="footer-copyright">

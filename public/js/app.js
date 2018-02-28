@@ -7,24 +7,15 @@ $(document).ready(function(){
     // Sets a flag for whether or not we're updating a post to be false initially
     var updating = false;
 
-
-    var First_Name = $("#First_Name");
-    var Last_Name = $("#Last_Name");
-    var Email = $("#Email");
-    var Password = $("#Password");
     var location = $("#location");
     var Role = $("#Role");
     var Bio = $("#Bio");
 
-    $(signupForm).on("submit", function createNewUser(event){
+    $(signup).on("submit", function createNewUser(event){
         event.preventDefault();
 
  // Constructing a newUser object to saves it to the database       
         var newUser = {
-            First_Name: First_Name.val().trim(),
-            Last_Name: Last_Name.val().trim(),
-            Email: Email.val().trim(),
-            Password: Password.val().trim(),
             location: location.val().trim(),
             Role: Role.val().trim(),
             Bio: Bio.val().trim()
@@ -46,9 +37,7 @@ $(document).ready(function(){
     $.get("/api/user/" + id, function(data) {
       if (data) {
         // If this post exists, prefill our cms forms with its data
-        First_Name.val(data.First_Name);
-        Last_Name.val(data.Last_Name);
-        Email.val(data.Email);
+
         location.val(data.location);
         Role.val(data.Role);
         Bio.val(data.Bio);
