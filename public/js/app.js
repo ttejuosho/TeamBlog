@@ -21,13 +21,14 @@ $(document).ready(function(){
             Bio: Bio.val().trim()
         };
 
-        console.log(UserInfo);
+        
         submitUser(UserInfo);
     });
 
     // Submits a new User and brings user to member page upon completion
     function submitUser(UserInfo) {
         $.post("/api/userinfo/", UserInfo, function() {
+          console.log(UserInfo);
         window.location.href = "/member";
         });
     }
