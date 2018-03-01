@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes){
     var UserInfo = sequelize.define('UserInfo', {
-        Location: {
+        location: {
             type: DataTypes.STRING,
             defaultValue: '',
             allowNull: false
