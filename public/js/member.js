@@ -34,8 +34,6 @@ $.get("/sessionUserId")
 
     })
 
-
-// getUser();
-// getUserInfo();
+    
 
 });
