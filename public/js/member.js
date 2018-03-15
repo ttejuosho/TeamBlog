@@ -1,11 +1,8 @@
 $(document).ready(function(){
     var userId = 0;
-    var memberWrapperDiv = $(".memberWrapper");
-    var bioDiv = $("<div>").addClass("bio");
-    var nameP = $("<p>").addClass("memberName");
-    var roleP = $("<p>").addClass("redtxt");
-    var locationP = $("<p>").addClass("greentxt");
-    var bioP = $("<p>").addClass("memberBio");
+    var bioDiv = $(".bio");
+
+
 
 // -- -- MAIN LOGIC / INITIALIZATION-- --
 
@@ -17,32 +14,30 @@ $.get("/sessionUserId")
 		userId = data[0].id;
 		console.log(userId);
 
+        		//creates a resume in db if none exists
+		$.get("/api/user/"+ userId)
+        .done(function(data){
+           if(data.length === 0){
+               $.post("/api/user/"+ userId)
+           }
+           console.log(data);
+           userData = data; 
+           var nameP = $("<p>").addClass("memberName").append(userData.firstname + " " + userData.lastname);
+           bioDiv.append(nameP);
+           // displayUserProfile(userData);           
+       })
 
         $.get("/api/userinfo/" + userId)
         .done(function(data){
            //  console.log(data);
            userInfoData = data;
-           bioDiv.append(roleP).append(userInfoData.Role);
-           bioDiv.append(locationP).append(userInfoData.location);
-           bioDiv.append(bioP).append(userInfoData.Bio);
+           var roleP = $("<p>").addClass("redtxt").append(userInfoData.Role);
+           var locationP = $("<p>").addClass("greentxt").append(userInfoData.location);
+           var bioP = $("<p>").addClass("memberBio").append(userInfoData.Bio);
+
+           bioDiv.append(roleP, locationP, bioP);
            // displayUserInfo(userInfoData);
         })
-
-
-		//creates a resume in db if none exists
-		$.get("/api/user/"+ userId)
-		 .done(function(data){
-			if(data.length === 0){
-				$.post("/api/user/"+ userId)
-			}
-            // console.log(data);
-            userData = data; 
-            memberWrapperDiv.append(bioDiv).append(nameP).append(userData.firstname + " " + userData.lastname);
-            // displayUserProfile(userData);           
-        })
-
-
-
 
 
 
