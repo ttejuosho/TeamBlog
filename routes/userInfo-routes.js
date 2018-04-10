@@ -4,11 +4,7 @@ module.exports = function(app) {
 
     // Get Users Info from DB
     app.get('/api/userinfo', function(req, res){
-        db.UserInfo.findAll({
-            where: {
-                id: req.params.id
-            },
-        }).then(function(dbUserInfo){
+        db.UserInfo.findAll({}).then(function(dbUserInfo){
             res.json(dbUserInfo);
         });
     });
@@ -38,16 +34,16 @@ module.exports = function(app) {
        // Update User Info 
    app.put('/api/userinfo/:id', function(req, res){
     
-    db.UserInfo.update(req.body,
-    {
-        where: {
-            UserId: req.params.id
-        }
-}).then(function(dbUserInfo){
-    res.json(dbUserInfo);
-});
+            db.UserInfo.update(req.body,
+            {
+                where: {
+                    UserId: req.params.id
+                }
+        }).then(function(dbUserInfo){
+            res.json(dbUserInfo);
+        });
 
-});
+        });
 
 
 }

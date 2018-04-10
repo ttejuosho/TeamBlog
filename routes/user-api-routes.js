@@ -4,10 +4,8 @@ var db = require('../models');
 module.exports = function(app) {
 // Find All Users and return results in json format
     app.get('/api/user', function(req,res) {
-
         db.User.findAll({}).then(function(dbUser){
-            res.json(dbUser);
-          
+            res.json(dbUser);         
         });   
     }); //end of basic get route
 
