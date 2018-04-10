@@ -10,30 +10,29 @@ module.exports = function(app) {
     });
 
     app.get('/api/userinfo/:id', function(req,res){
-        // Find One User by ID and return them in Json format 
-            db.UserInfo.findOne({
-                where: {
-                    id: req.params.id
-                }
-            }).then(function(dbUserInfo){
-                res.json(dbUserInfo);
-            });
-        });//end of getId function
+    // Find One Userinfo by ID and return them in Json format 
+        db.UserInfo.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(dbUserInfo){
+            res.json(dbUserInfo);
+        });
+    });//end of getId function
 
 
         // Post User Info to API
     app.post('/api/userinfo', function(req, res){
-        // Creates a User with available data
-            console.log(req.body);
-            db.UserInfo.create(req.body).then(function(dbUserInfo) {
-                res.json(dbUserInfo);
-            });
-        }); //end of post route
+    // Creates a User with available data
+        console.log(req.body);
+        db.UserInfo.create(req.body).then(function(dbUserInfo) {
+            res.json(dbUserInfo);
+        });
+    }); //end of post route
 
 
        // Update User Info 
-   app.put('/api/userinfo/:id', function(req, res){
-    
+   app.put('/api/userinfo/:id', function(req, res){   
             db.UserInfo.update(req.body,
             {
                 where: {
@@ -44,6 +43,4 @@ module.exports = function(app) {
         });
 
         });
-
-
 }
