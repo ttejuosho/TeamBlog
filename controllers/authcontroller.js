@@ -15,7 +15,7 @@ exports.signin = function(req,res){
 };
 
 exports.dashboard = function(req,res){
-// Printts out the sessions object
+// Prints out the sessions object
     console.log(req.session);
     
     // Prints out the session ID

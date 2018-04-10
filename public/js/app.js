@@ -6,7 +6,7 @@ $(document).ready(function(){
     
     // Sets a flag for whether or not we're updating a post to be false initially
     var updating = false;
-
+    var register = $("#register");
     var location = $("#location");
     var Role = $("#Role");
     var Bio = $("#Bio");

@@ -14,50 +14,53 @@ $.get("/sessionUserId")
 		userId = data[0].id;
 		console.log(userId);
 
-        		//creates a resume in db if none exists
+    //creates a user in db if none exists
 		$.get("/api/user/"+ userId)
-        .done(function(data){
-           if(data.length === 0){
-               $.post("/api/user/"+ userId)
-           }
-           console.log(data);
-           userData = data; 
-           var nameP = $("<p>").addClass("memberName").append(userData.firstname + " " + userData.lastname);
-           bioDiv.append(nameP);
-           // displayUserProfile(userData);           
+        .done(function(data){   
+            userData = data; 
+            // console.log(data);
+            if(data.length === 0){
+                $.post("/api/user/"+ userId)
+            } else {
+                getUserData(); 
+            }     
+               
        })
 
-        $.get("/api/userinfo/" + userId)
-        .done(function(data){
+       $.get("/api/userinfo/" + userId)
+       .done(function(data){
+        userInfoData = data;
+        if(data.length === 0){
+            $.post("/api/userinfo/"+ userId)
+        } else {
+            getUserInfoData(); 
+        }     
+       })
+
+
+
+// getUserData();
+// getUserInfoData();
+
+
+function getUserData(data) {   
+    var nameP = $("<p>").addClass("memberName").append(userData.firstname + " " + userData.lastname);
+    bioDiv.append(nameP);
+}
+
+
+function getUserInfoData(data){
            //  console.log(data);
-           userInfoData = data;
+          
            var roleP = $("<p>").addClass("redtxt").append(userInfoData.Role);
            var locationP = $("<p>").addClass("greentxt").append(userInfoData.location);
            var bioP = $("<p>").addClass("memberBio").append(userInfoData.Bio);
 
            bioDiv.append(roleP, locationP, bioP);
            // displayUserInfo(userInfoData);
-        })
+}
 
 
-
-    // function displayUserProfile(userData){
-    
-    //     roleP.append(
-    //         nameP.append(userData.firstname + " " + userData.lastname),
-    //     );
-
-    //     return roleP;
-    // }
-
-    // function displayUserInfo(userInfoData){
-
-    //     bioDiv.append(roleP).append(userInfoData.Role);
-    //     nameP.append(locationP).append(userInfoData.location);
-    //     locationP.append(bioP).append(userInfoData.Bio);
-
-    //     return bioDiv;
-    // }
 
   
 })
